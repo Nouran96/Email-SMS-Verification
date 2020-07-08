@@ -14,12 +14,12 @@ class EmailService implements IService {
      * @param array $recipient_info
      * @return array
      */
-    public function verify($recipient_info) {
+    public function verify($recipient_info) : array {
 
         if($recipient_info['email']) {
             
             Mail::to($recipient_info['email'])->send(new VerificationMail($recipient_info));
-            return array('message' => 'Check you email for verification mail');
+            return array('message' => 'Check your email for verification mail');
 
         } else {
 

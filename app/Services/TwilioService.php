@@ -25,7 +25,7 @@ class TwilioService implements IService {
      * @param array $recipient_info
      * @return array
      */
-    public function verify($recipient_info) {
+    public function verify($recipient_info) : array {
 
         if($recipient_info['phone']) {
             
@@ -34,8 +34,12 @@ class TwilioService implements IService {
                     ->verifications
                     ->create($recipient_info['phone'], 'sms');
 
-                return array('message' => 'Check your phone for verification message');
-                
+                if($verification->sid) {
+                    return array('message' => 'Check your phone for verification message');
+                } else {
+                    return array('error' => 'Something went wrong in verification');
+                }
+
             } catch (TwilioException $exception) {
                 return array('error' => 'Verification failed. Make sure that you phone number is correct and in global format');
             }
