@@ -8,9 +8,9 @@ You should have `node` and `composer` installed. If you don't, install node from
 
 ### Installing
 1. Download the zipped file and unzip it or Clone it
-		```sh
-		git clone https://github.com/Nouran96/Email-SMS-Verification.git
-		```
+    ```sh
+    git clone https://github.com/Nouran96/Email-SMS-Verification.git
+    ```
 2. cd inside the project
     ```sh
     cd Email-SMS-Verification
@@ -35,6 +35,7 @@ You should have `node` and `composer` installed. If you don't, install node from
     ```sh
     php artisan serve
     ```
+8. Change verification method from .env file -> VERIFICATION_METHOD to be either SMS or EMAIL
 
 ### License
 MIT License
