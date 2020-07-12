@@ -36,6 +36,7 @@ You should have `node` and `composer` installed. If you don't, install node from
     php artisan serve
     ```
 8. Change verification method from .env file -> VERIFICATION_METHOD to be either SMS or EMAIL
+9. Add your Twilio credentials in .env file -> TWILIO_SID, TWILIO_AUTH_TOKEN
 
 ### License
 MIT License
