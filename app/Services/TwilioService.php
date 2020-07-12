@@ -41,7 +41,7 @@ class TwilioService implements IService {
                 }
 
             } catch (TwilioException $exception) {
-                return array('error' => 'Verification failed. Make sure that you phone number is correct and in global format');
+                return array('error' => 'Verification failed. Make sure that your phone number is correct and in global format');
             }
 
         } else {
